@@ -16,6 +16,10 @@ struct _Producto
 };
 
 
+/*--------------
+ | Constructor
+ ---------------*/
+
 Producto crearProducto(char nombre[30], float precio, int stock)
 {
     Producto producto = malloc(sizeof(struct _Producto));
@@ -28,6 +32,10 @@ Producto crearProducto(char nombre[30], float precio, int stock)
     return producto;
 }
 
+
+/*------------------------
+ | Funciones individuales
+ -------------------------*/
 
 Producto crearProductoPorTeclado()
 {
@@ -49,12 +57,23 @@ Producto crearProductoPorTeclado()
 }
 
 
+Producto inicializarProducto()
+{
+    return crearProducto("", -1, -1);
+}
+
+
 void mostrarProducto(Producto producto)
 {
-    printf("\nProducto:");
-    printf("\n\t- Nombre: %s", producto->nombre);
-    printf("\n\t- Precio: AR$%.2f", producto->precio);
-    printf("\n\t- Stock: %d", producto->stock);
+    if(producto->stock != -1)
+    {
+        printf("\nProducto:");
+        printf("\n\t- Nombre: %s", producto->nombre);
+        printf("\n\t- Precio: AR$%.2f", producto->precio);
+        printf("\n\t- Stock: %d", producto->stock);
+    }
 }
+
+
 
 
