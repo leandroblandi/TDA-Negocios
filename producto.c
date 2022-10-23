@@ -8,6 +8,8 @@
 #include <string.h>
 #include "producto.h"
 
+#define CANTIDAD_PRODUCTOS 2
+
 struct _Producto
 {
     char nombre[30];
@@ -118,6 +120,30 @@ void mostrarProducto(Producto producto)
     }
 }
 
+
+/*---------------------------
+ | Procedimientos de archivo
+ ---------------------------*/
+
+void guardarProductosEnArchivo(Producto productos[])
+ {
+    FILE * archivoProductos = fopen("productos.txt", "w");
+
+    for(int i = 0; i < CANTIDAD_PRODUCTOS; i++)
+    {
+        if(productos[i]->stock != -1)
+        {
+            fprintf(
+                archivoProductos,
+                "%s,%.2f,%d\n",
+                productos[i]->nombre,
+                productos[i]->precio,
+                productos[i]->stock
+            );
+        }
+    }
+    fclose(archivoProductos);
+ }
 
 
 

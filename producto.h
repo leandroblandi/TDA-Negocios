@@ -56,4 +56,10 @@ Producto inicializarProducto();
 void mostrarProducto(Producto producto);
 
 
+/*---------------------------
+ | Procedimientos de archivo
+ ---------------------------*/
+
+void guardarProductosEnArchivo(Producto productos[]);
+
 #endif // PRODUCTO_H_INCLUDED

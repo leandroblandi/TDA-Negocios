@@ -9,9 +9,8 @@ int main()
 
     mostrarNegocio(negocio);
 
-    ordenarProductosPorStock(negocio);
-
-    mostrarNegocio(negocio);
+    guardarNegocioEnArchivo(negocio);
+    guardarProductosEnArchivo(getProductos(negocio));
 
     return 0;
 }

@@ -39,6 +39,12 @@ Negocio crearNegocio(char nombre[30], char direccion[60], int CUIT)
 }
 
 
+Producto getProductos(Negocio negocio)
+{
+    return negocio->productos;
+}
+
+
 Negocio inicializarNegocio()
 {
     return crearNegocio("", "", -1);
@@ -190,5 +196,27 @@ void ordenarProductosPorStock(Negocio negocio)
         }
     }
 }
+
+
+/*---------------------------
+ | Procedimientos de archivo
+ ---------------------------*/
+
+ void guardarNegocioEnArchivo(Negocio negocio)
+ {
+    FILE * archivoNegocio = fopen("negocio.txt", "w");
+
+    if(negocio->CUIT != -1)
+    {
+        fprintf(
+            archivoNegocio,
+            "%s,%s,%d\n",
+            negocio->nombre,
+            negocio->direccion,
+            negocio->CUIT
+        );
+    }
+    fclose(archivoNegocio);
+ }
 
 

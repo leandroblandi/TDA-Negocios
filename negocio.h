@@ -20,6 +20,13 @@ typedef struct _Negocio * Negocio;
 Negocio crearNegocio(char nombre[30], char direccion[60], int CUIT);
 
 
+ /*--------
+ | Getters
+ ---------*/
+
+Producto getProductos(Negocio negocio);
+
+
 /*---------------------------------
  | Funciones individuales: Negocio
  ---------------------------------*/
@@ -62,11 +69,12 @@ void ordenarProductosPorPrecio(Negocio negocio);
 void ordenarProductosPorStock(Negocio negocio);
 
 
-/*------------------------
- | Funciones de arreglo
- -------------------------*/
+/*---------------------------
+ | Procedimientos de archivo
+ ---------------------------*/
 
-void cargarNegocios(Negocio negocios[]);
+ void guardarNegocioEnArchivo(Negocio negocio);
+
 
 
 #endif // NEGOCIO_H_INCLUDED
