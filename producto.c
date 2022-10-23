@@ -33,6 +33,50 @@ Producto crearProducto(char nombre[30], float precio, int stock)
 }
 
 
+/*----------
+| Setters
+-----------*/
+
+void setNombreProducto(Producto producto, char nuevoNombre[30])
+{
+    strcpy(producto->nombre, nuevoNombre);
+}
+
+
+void setPrecioProducto(Producto producto, float nuevoPrecio)
+{
+    producto->precio = nuevoPrecio;
+}
+
+
+void setStockProducto(Producto producto, int nuevaCantidad)
+{
+    producto->stock = nuevaCantidad;
+}
+
+
+/*----------
+| Getters
+-----------*/
+
+char * getNombreProducto(Producto producto)
+{
+    return producto->nombre;
+}
+
+
+float getPrecioProducto(Producto producto)
+{
+    return producto->precio;
+}
+
+
+int getStockProducto(Producto producto)
+{
+    return producto->stock;
+}
+
+
 /*------------------------
  | Funciones individuales
  -------------------------*/

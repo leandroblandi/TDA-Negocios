@@ -20,6 +20,24 @@ typedef struct _Producto * Producto;
 Producto crearProducto(char nombre[30], float precio, int stock);
 
 
+/*----------
+| Setters
+-----------*/
+
+void setNombreProducto(Producto producto, char nuevoNombre[30]);
+void setPrecioProducto(Producto producto, float nuevoPrecio);
+void setStockProducto(Producto producto, int nuevaCantidad);
+
+
+/*----------
+| Getters
+-----------*/
+
+char * getNombreProducto(Producto producto);
+float getPrecioProducto(Producto producto);
+int getStockProducto(Producto producto);
+
+
 /*------------------------
  | Funciones individuales
  -------------------------*/

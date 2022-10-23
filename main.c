@@ -5,7 +5,12 @@
 
 int main()
 {
-    Negocio negocio = crearNegocio("Los Pepes SA", "Los Humedales 6400", 38958493);
+    Negocio negocio = crearNegocioPorTeclado();
+
+    mostrarNegocio(negocio);
+
+    ordenarProductosPorStock(negocio);
+
     mostrarNegocio(negocio);
 
     return 0;

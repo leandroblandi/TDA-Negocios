@@ -19,8 +19,54 @@ typedef struct _Negocio * Negocio;
 /// @post:
 Negocio crearNegocio(char nombre[30], char direccion[60], int CUIT);
 
+
+/*---------------------------------
+ | Funciones individuales: Negocio
+ ---------------------------------*/
+
+/// @pre:
+/// @post:
+Negocio inicializarNegocio();
+
+/// @pre:
+/// @post:
+Negocio crearNegocioPorTeclado();
+
 /// @pre:
 /// @post:
 void mostrarNegocio(Negocio negocio);
+
+
+/*----------------------------------
+ | Funciones individuales: Producto
+ ----------------------------------*/
+
+/// @pre:
+/// @post:
+void cargarProductos(Negocio negocio);
+
+/// @pre:
+/// @post:
+void modificarProducto(Negocio negocio, char nombreProducto[30]);
+
+/// @pre:
+/// @post:
+void eliminarProducto(Negocio negocio, char nombreProducto[30]);
+
+/// @pre:
+/// @post:
+void ordenarProductosPorPrecio(Negocio negocio);
+
+/// @pre:
+/// @post:
+void ordenarProductosPorStock(Negocio negocio);
+
+
+/*------------------------
+ | Funciones de arreglo
+ -------------------------*/
+
+void cargarNegocios(Negocio negocios[]);
+
 
 #endif // NEGOCIO_H_INCLUDED

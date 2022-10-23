@@ -1,17 +1,24 @@
 # depslib dependency file v1.0
-1666490946 source:c:\users\el3be\documents\practicas en c\tda_negocio\producto.c
+1666493385 source:c:\users\el3be\documents\practicas en c\tda_negocio\producto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"producto.h"
 
-1666490945 c:\users\el3be\documents\practicas en c\tda_negocio\producto.h
+1666492673 c:\users\el3be\documents\practicas en c\tda_negocio\producto.h
 
-1666491329 source:c:\users\el3be\documents\practicas en c\tda_negocio\main.c
+1666493375 source:c:\users\el3be\documents\practicas en c\tda_negocio\main.c
 	<stdio.h>
 	<stdlib.h>
 	"producto.h"
 	"negocio.h"
 
-1666491039 c:\users\el3be\documents\practicas en c\tda_negocio\negocio.h
+1666494022 c:\users\el3be\documents\practicas en c\tda_negocio\negocio.h
+
+1666493708 source:c:\users\el3be\documents\practicas en c\tda_negocio\negocio.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"producto.h"
+	"negocio.h"
 
