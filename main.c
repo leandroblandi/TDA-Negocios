@@ -4,7 +4,7 @@
 
 int main()
 {
-    Producto producto = crearProducto("Coca Cola", 1500, 6);
+    Producto producto = crearProductoPorTeclado();
     mostrarProducto(producto);
 
     return 0;

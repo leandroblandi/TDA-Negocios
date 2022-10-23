@@ -28,6 +28,27 @@ Producto crearProducto(char nombre[30], float precio, int stock)
     return producto;
 }
 
+
+Producto crearProductoPorTeclado()
+{
+    char nombre[30];
+    float precio;
+    int stock;
+
+    printf("Ingrese un nombre para el producto: ");
+    fflush(stdin);
+    gets(nombre);
+
+    printf("\nIngrese un precio para \"%s\": ", nombre);
+    scanf("%f", &precio);
+
+    printf("\n¿Cuanto stock tiene \"%s\"?: ", nombre);
+    scanf("%d", &stock);
+
+    return crearProducto(nombre, precio, stock);
+}
+
+
 void mostrarProducto(Producto producto)
 {
     printf("\nProducto:");
