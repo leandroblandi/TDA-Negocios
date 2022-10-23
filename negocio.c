@@ -39,11 +39,19 @@ Negocio crearNegocio(char nombre[30], char direccion[60], int CUIT)
 }
 
 
+ /*--------
+ | Getters
+ ---------*/
+
 Producto getProductos(Negocio negocio)
 {
     return negocio->productos;
 }
 
+
+/*---------------------------------
+ | Funciones individuales: Negocio
+ ---------------------------------*/
 
 Negocio inicializarNegocio()
 {
@@ -90,6 +98,10 @@ void mostrarNegocio(Negocio negocio)
     }
 }
 
+
+/*----------------------------------
+ | Funciones individuales: Producto
+ ----------------------------------*/
 
 void cargarProductos(Negocio negocio)
 {

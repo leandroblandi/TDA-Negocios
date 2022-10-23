@@ -15,8 +15,8 @@ typedef struct _Producto * Producto;
  | Constructor
  ---------------*/
 
-/// @pre:
-/// @post:
+/// @pre: Nada
+/// @post: Devuelve un struct _Producto con todos los atributos pasados por parametro
 Producto crearProducto(char nombre[30], float precio, int stock);
 
 
@@ -42,17 +42,17 @@ int getStockProducto(Producto producto);
  | Funciones individuales
  -------------------------*/
 
-/// @pre:
-/// @post:
+/// @pre: Nada
+/// @post: Devuelve un struct _Producto personalizado
 Producto crearProductoPorTeclado();
 
-/// @pre:
-/// @post:
+/// @pre: Nada
+/// @post: Devuelve un struct _Producto filtrable
 Producto inicializarProducto();
 
 
-/// @pre:
-/// @post:
+/// @pre: Producto producto debe existir y ser no-filtrable
+/// @post: Muestra todos los datos del Producto Producto
 void mostrarProducto(Producto producto);
 
 
@@ -60,6 +60,8 @@ void mostrarProducto(Producto producto);
  | Procedimientos de archivo
  ---------------------------*/
 
+/// @pre: Deben existir Producto productos[] y ser no-filtrables
+/// @post: Guarda todos sus datos de cada posicion en un .txt (se crea automaticamente)
 void guardarProductosEnArchivo(Producto productos[]);
 
 #endif // PRODUCTO_H_INCLUDED

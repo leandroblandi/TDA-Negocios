@@ -15,8 +15,8 @@ typedef struct _Negocio * Negocio;
  | Constructor
  ---------------*/
 
-/// @pre:
-/// @post:
+/// @pre: Nada
+/// @post: Devuelve un struct _Negocio con todos los atributos ingresados por parametro
 Negocio crearNegocio(char nombre[30], char direccion[60], int CUIT);
 
 
@@ -31,16 +31,16 @@ Producto getProductos(Negocio negocio);
  | Funciones individuales: Negocio
  ---------------------------------*/
 
-/// @pre:
-/// @post:
+/// @pre: Nada
+/// @post: Devuelve un struct _Negocio filtrable
 Negocio inicializarNegocio();
 
-/// @pre:
-/// @post:
+/// @pre: Se ingresa por teclado
+/// @post: Devuelve un struct _Negocio personalizado
 Negocio crearNegocioPorTeclado();
 
-/// @pre:
-/// @post:
+/// @pre: El struct _Negocio debe ser no-filtrable
+/// @post: Muestra todos los datos del struct _Negocio
 void mostrarNegocio(Negocio negocio);
 
 
@@ -48,24 +48,24 @@ void mostrarNegocio(Negocio negocio);
  | Funciones individuales: Producto
  ----------------------------------*/
 
-/// @pre:
-/// @post:
+/// @pre: Debe existir Negocio negocio. Se ingresa por teclado cada producto (ver CANTIDAD_PRODUCTOS)
+/// @post: Carga en cada posicion de struct _Negocio->productos[] un struct _Producto
 void cargarProductos(Negocio negocio);
 
-/// @pre:
-/// @post:
+/// @pre: Debe existir Negocio negocio. El producto a modificar tambien
+/// @post: Modifica el precio y stock del producto en cuestion
 void modificarProducto(Negocio negocio, char nombreProducto[30]);
 
-/// @pre:
-/// @post:
+/// @pre: Debe existir Negocio negocio. El producto a eliminar tambien
+/// @post: Setea sus atributos en vacio, o -1 (lo hace filtrable)
 void eliminarProducto(Negocio negocio, char nombreProducto[30]);
 
-/// @pre:
-/// @post:
+/// @pre: Debe existir Negocio negocio. Los productos deben ser no-filtrables
+/// @post: Ordena por precio ascendente
 void ordenarProductosPorPrecio(Negocio negocio);
 
-/// @pre:
-/// @post:
+/// @pre: Debe existir Negocio negocio. Los productos deben ser no-filtrables
+/// @post: Ordena por stock (cantidad de productos) ascendente
 void ordenarProductosPorStock(Negocio negocio);
 
 
@@ -73,7 +73,9 @@ void ordenarProductosPorStock(Negocio negocio);
  | Procedimientos de archivo
  ---------------------------*/
 
- void guardarNegocioEnArchivo(Negocio negocio);
+/// @pre: Debe existir Negocio negocio y ser no-filtrable
+/// @post: Guarda todos sus datos en un .txt (se crea automaticamente)
+void guardarNegocioEnArchivo(Negocio negocio);
 
 
 
