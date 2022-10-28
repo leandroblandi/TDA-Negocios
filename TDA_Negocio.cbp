@@ -34,6 +34,14 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="negocio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="negocio.h" />
+		<Unit filename="producto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="producto.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
